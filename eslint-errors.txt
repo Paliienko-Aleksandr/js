@@ -3,3 +3,4 @@ Expected '===' and instead saw '=='
 Replace `······return·c;␍` with `····return·c
 Replace `····for·(let·i·=·1;·i·<·10;·i++)·{␍` with `··for·(let·i·=·1;·i·<·10;·i++)·{`
 Replace `····for·(let·i·=·1;·i·<·10;·i++)·{␍` with `··for·(let·i·=·1;·i·<·10;·i++)·{`
+Replace `··run();` with `run()
