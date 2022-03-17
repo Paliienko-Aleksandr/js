@@ -1,17 +1,23 @@
-function run() {
-  var a = 0;
-
-  if (a == 1) {
-    return c;
-  }
-
-  for (let i = 1; i < 10; i++) {
-    console.log(i);
-  }
-
-  return (d = a);
+const cleanTransactionsList = transactions => {
+     let finalArray = [];
+    for (let i = 0; i < transactions.length; i++){
+        let res = (transactions[i]);
+        res = Number(res);
+        if (!Number.isNaN(res)){
+            
+            finalArray.push('$' + res.toFixed(2));
+        }
+    }
+   console.log(finalArray)
 }
+ 
+cleanTransactionsList(['  1.9', '16.4', 89, '1 dollar ', 189, 'six'])
 
-run();
+
+
+
+
+
+
 
 
