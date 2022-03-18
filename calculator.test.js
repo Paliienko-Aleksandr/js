@@ -4,7 +4,9 @@ it ('should get square number', () => {
   const result = getSquaredArray([1, 2, 3]);
 
   expect(result).toEqual([1, 4, 9])
+  return result
 });
+
 
 it ('should get odd number', () => {
   const result = getOddNumbers([1, 2, 3, 5]);
