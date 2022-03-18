@@ -2,7 +2,7 @@
 export const getSquaredArray = arr => {
   arr.map(num => num * num)
 
-  return getSquaredArray()
+  return getSquaredArray([1, 2, 3])
 };
 
 
