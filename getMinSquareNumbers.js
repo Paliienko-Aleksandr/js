@@ -2,18 +2,18 @@
 
 //   arr.map(num => (num * num))
 
-let arr = [1,2,3,4]
-export default (arr) =>{
+
+const getMinSquareNumbers = (arr) =>{
 
     if (!Array.isArray(arr) || arr.length === 0){
       return null
     }
 
-    let result = arr.map(num => Math.abs(num))
+    let result = arr.map(num => Math.abs(num*num))
     let min = Math.min(...result)
 
-   console.log(min)
+  console.log(min)
   
 }
-
+getMinSquareNumbers([1.25, -25, -0.8, 4.75])
 
