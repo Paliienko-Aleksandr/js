@@ -17,6 +17,25 @@ export const getAdults = obj => {
     age[key] = obj[key]
     }
   }
+  console.log(age)
  return age
 };
-getAdults({'John Doe': 19, 'Tom': 17, 'Bob': 18})
+getAdults({'John Doe': 87, 'Tom': 1, 'Bob': 14, 'Jerry': 18.3});
+
+
+export function withdraw(clients, balances, client, amount){
+  let indexOfPerson = clients.indexOf(client);
+  let res;
+
+  if (balances[indexOfPerson] >= amount){
+    res = balances[indexOfPerson] -= amount;
+    console.log(res)
+    return res;
+  }else if(balances[indexOfPerson] < amount){
+    return -1;
+
+  }
+
+}
+
+withdraw(['John', 'Ann', 'Alex'], [120, 87, -6], 'John', 50)

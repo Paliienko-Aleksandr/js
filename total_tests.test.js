@@ -1,4 +1,6 @@
-import {reverseArray, getAdults} from './total_tests.js'
+import {reverseArray, getAdults, withdraw} from './total_tests.js'
+
+                      // reverse array
 
 it ('reverse', () =>{
   const result = reverseArray([10, 20, 30, 50, 90, 1458]);
@@ -19,9 +21,44 @@ it ('reverse', () =>{
   
 });
  
+                         // get adult
+
 it ('get adult', () =>{
   const result = getAdults({'John Doe': 19, 'Tom': 17, 'Bob': 18});
 
   expect(result).toEqual({'John Doe': 19, 'Bob': 18});
+  
+});
+it ('get adult', () =>{
+  const result = getAdults({'John Doe': 87, 'Tom': 1, 'Bob': 14, 'Jerry': 18});
+
+  expect(result).toEqual({'John Doe': 87, 'Jerry': 18});
+  
+});
+it ('get adult', () =>{
+  const result = getAdults({'John Doe': 17.99, 'Tom': 1, 'Bob': 14, 'Jerry': 18.3});
+
+  expect(result).toEqual({'Jerry': 18.3});
+  
+});
+
+                              // withdraw
+
+it ('get adult', () =>{
+  const result = withdraw(['John', 'Ann', 'Alex'], [120, 87, -6], 'John', 50);
+
+  expect(result).toEqual(70);
+  
+});
+it ('get adult', () =>{
+  const result = withdraw(['John', 'Ann', 'Alex'], [120, 87, -6], 'Alex', 50);
+
+  expect(result).toEqual(-1);
+  
+});
+it ('get adult', () =>{
+  const result = withdraw(['John', 'Ann', 'Alex'], [120, 87, -6], 'John', 120);
+
+  expect(result).toEqual(0);
   
 });
